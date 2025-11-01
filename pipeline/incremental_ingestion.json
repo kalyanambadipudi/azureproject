@@ -69,11 +69,28 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"container": "bronze",
-							"file": "cdc",
-							"folder": "cdc.json"
+							"file": "cdc.json",
+							"folder": "cdc"
 						}
 					},
 					"firstRowOnly": false
+				}
+			},
+			{
+				"name": "current",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "current",
+					"value": {
+						"value": "@utcNow()",
+						"type": "Expression"
+					}
 				}
 			}
 		],
