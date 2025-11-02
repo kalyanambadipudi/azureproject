@@ -150,7 +150,10 @@
 						"additionalColumns": [
 							{
 								"name": "cdc",
-								"value": "$$FILEPATH"
+								"value": {
+									"value": "place_holder",
+									"type": "Expression"
+								}
 							}
 						],
 						"storeSettings": {
